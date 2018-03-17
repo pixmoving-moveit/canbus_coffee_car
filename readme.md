@@ -6,3 +6,5 @@ CANalyst-2 driver package under ROS can read CANbus device information and send 
 When using Autoware to control the unmanned vehicle, open the launch directly.
 
 roslaunch canalystii_node coffee_car_control.launch
+
+
