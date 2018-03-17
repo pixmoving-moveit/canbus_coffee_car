@@ -1,0 +1,14 @@
+<launch>
+
+  <remap from="velodyne_points" to="/points_raw"/>
+
+<!--  <include file="$(find teleop_joy)/launch/teleop_joy.launch" />-->
+  <include file="$(find velodyne_pointcloud)/launch/32c_points.launch" />
+
+  <node pkg="canalystii_node" type="canalystii_node_ros" name="canalystii_node_ros"/>
+  <node pkg="canalystii_node" type="canbus_trans" name="canbus_trans"/>
+
+  <node pkg="canalystii_node" type="twist_converter_node" name="twist_converter_node"/>
+
+
+</launch>
